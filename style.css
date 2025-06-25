@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --tileCl: #131111;
+    --tileOutlineCl: white;
+    --backgroundCl: #535353;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: var(--backgroundCl);
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.gameContainer{
+    position: relative;
+}
+
+.ticTacToe{
+    background-color: white;
+    width: 501px;
+    height: 501px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.beginGameBtn{
+    background-color: white;
+    border: none;
+    color: black;
+    height: 50px;
+    width: 160px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.beginGameBtn:hover{
+    background-color: #5a5a5a;
+}
+
+.tile{
+    outline: 2px solid var(--tileOutlineCl);
+    background-color: var(--tileCl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 145px;
+}
+
+.tile:hover{
+    background-color: #252121;
+}
+
+.inputContainer{
+    display: flex;
+}
+
+.p1Name{
+    margin-right: auto;
+    
+}
+
+.inputContainer input{
+    background-color: #353434;
+    border: none;
+    height: 40px;
+    width: 195px;
+    border-bottom: #131111 solid 3px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.inputContainer input:focus{
+    outline: none;
+}
+
+.blurEf{
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.glowEf{
+    box-shadow: 0px 0px 10px 6px;
+}
